@@ -524,9 +524,12 @@ Output:
 
     GTP_Read_Version(); 
 
+#if UPDATE_CONFIG
 
     memset(&config[GTP_ADDR_LENGTH], 0, GTP_CONFIG_MAX_LENGTH);
     memcpy(&config[GTP_ADDR_LENGTH], cfg_info, cfg_info_len);
+
+
 
     //计算要写入checksum寄存器的值
     check_sum = 0;
@@ -576,6 +579,11 @@ Output:
 	    		GTP_DEBUG("Config success ! i = %d ",i);
 	}
 #endif
+
+#endif
+  free(config);
+
+  
     I2C_GTP_IRQEnable();
     
     GTP_Get_Info();

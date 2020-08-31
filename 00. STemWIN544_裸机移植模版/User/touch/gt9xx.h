@@ -20,10 +20,13 @@
 
 #include "stm32f4xx.h"
 
+
 #ifndef NULL
   #define NULL        0
 #endif
 
+
+#define UPDATE_CONFIG    0    // 1 ：更新配置    0 ：不更新配置
 /**
  * struct i2c_msg - an I2C transaction segment beginning with START
  * @addr: Slave address, either seven or ten bits.  When this is a ten
