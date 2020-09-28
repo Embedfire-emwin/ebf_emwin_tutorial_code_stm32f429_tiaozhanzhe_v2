@@ -37,7 +37,7 @@
 #include "GUI.h"
 #include "DIALOG.h"
 #include "RadioDLG.h"
-#include "ScreenShot.h"
+//#include "ScreenShot.h"
 /* FATFS */
 #include "ff.h"
 #include "diskio.h"

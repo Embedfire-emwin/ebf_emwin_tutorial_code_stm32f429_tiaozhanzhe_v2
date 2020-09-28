@@ -488,7 +488,7 @@ Output:
     GTP_Read_Version(); 
 
 
-    memset(&config[GTP_ADDR_LENGTH], 0, GTP_CONFIG_MAX_LENGTH);
+ /*   memset(&config[GTP_ADDR_LENGTH], 0, GTP_CONFIG_MAX_LENGTH);
     memcpy(&config[GTP_ADDR_LENGTH], cfg_info, cfg_info_len);
 
     //计算要写入checksum寄存器的值
@@ -508,7 +508,7 @@ Output:
         {
             break;
         }
-    }
+    } */
     Delay(0xfffff);				//延迟等待芯片更新
 
 #if 0	//读出写入的数据，检查是否正常写入
